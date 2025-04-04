@@ -27,7 +27,7 @@ messages = ["message-1" , "message-2" , "message-3" , "message-4" , "message-5" 
 @app.route('/')
 def index():
     title = "Nations Recovery Services"
-    header = "Nations Recovery Services Home"
+    header = "Nations Recovery Services Inc."
 
     prop_url = "https://jasonnationsrecovery.wixsite.com/mysite/general-4"
     vehicle_url = "https://jasonnationsrecovery.wixsite.com/mysite/general-4"
@@ -54,32 +54,6 @@ def property_info():
 
     return render_template('property_information.html', message=info_message, title=title, header=header, message_1=messages[0], message_2=messages[1], message_3=messages[2], message_4=messages[3], message_5=messages[4], message_6=messages[5], prop_url=prop_url)
 
-"""
-DUMMY PROP REDEMPTION FORM
-
-@app.route('/property-release', methods=['GET', 'POST'])
-def property_release():
-    if request.method == 'POST':
-        # Process the form data here (e.g., save to database, send email)
-        property_address = request.form['propertyAddress']
-        owner_name = request.form['ownerName']
-        owner_contact = request.form['ownerContact']
-        property_description = request.form['propertyDescription']
-        photographer_name = request.form['photographerName']
-        photographer_contact = request.form['photographerContact']
-        client_name = request.form['clientName']
-        client_contact = request.form['clientContact']
-
-        # For demonstration purposes, print the data
-        print(f"Property Address: {property_address}")
-        print(f"Owner Name: {owner_name}")
-        # ... print other form data ...
-
-        # You can add logic to handle the form submission (e.g., save to a file)
-        return "Form submitted successfully!"  # Or redirect to a success page
-
-    return render_template('property_release.html')"
-"""
 
 if __name__ == '__main__':
     app.run(debug=True)
