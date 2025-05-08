@@ -59,6 +59,27 @@ def property_info():
 
     return render_template('property_information.html', message=info_message, title=title, header=header, message_1=messages[0], message_2=messages[1], message_3=messages[2], message_4=messages[3], message_5=messages[4], message_6=messages[5], message_7=messages[6], prop_url=prop_url)
 
+@app.route('/vehicle-redemption-information')
+def vehicle_redemption_info():
+    title = "Vehicle redemption information"
+    header = "Vehicle Release Information"
+    # You can pass data to the template if needed
+    info_message = "Here is some important information about vehicle releases."
+
+    messages[0] = property_info_steps_1['step_text']
+    messages[1] = property_info_steps_2['step_text']
+    messages[2] = property_info_steps_3['step_text']
+    messages[3] = property_info_steps_4['step_text']
+    messages[4] = property_info_steps_5['step_text']
+    messages[5] = property_info_steps_6['step_text']
+    messages[6] = property_info_steps_7['step_text']
+    # You can add more messages or data as needed
+
+    prop_url = "https://jasonnationsrecovery.wixsite.com/mysite/general-4"
+
+
+    return render_template('property_information.html', message=info_message, title=title, header=header, message_1=messages[0], message_2=messages[1], message_3=messages[2], message_4=messages[3], message_5=messages[4], message_6=messages[5], message_7=messages[6], prop_url=prop_url)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
