@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+#this comment is to test the git commit for AWS
+
 property_info_steps_text = [ # Step 1 
                             "Schedule a property redemption appointment on the date and time of your choosing using the link below. Appointments must be scheduled within a days advance due to the volume of appointments trying to be made so schedule EARLY. Monday - Friday 10A.M. - 4P.M.. Appointments made after 4P.M. may not be confirmed until the following business day." ,
                             # Step 2
