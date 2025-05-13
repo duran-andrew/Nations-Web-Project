@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 #this comment is to test the git commit for AWS
 
@@ -65,7 +65,7 @@ vehicle_info_steps_10 = dict( step_name="Paperwork" , step_number=10 , step_text
 vehicle_messages = ["message-1" , "message-2" , "message-3" , "message-4" , "message-5" , "message-6", "message-7", "message-8", "message-9", "message-10"]
 
 
-@app.route('/')
+@application.route('/')
 def index():
     title = "Nations Recovery Services"
     header = "Nations Recovery Services Inc."
@@ -76,7 +76,7 @@ def index():
 
     return render_template('index.html', title=title, header=header, prop_url=prop_url, vehicle_url=vehicle_url, transport_url=transport_url)
 
-@app.route('/property-information')
+@application.route('/property-information')
 def property_info():
     title = "Property information"
     header = "Property Release Information"
@@ -97,7 +97,7 @@ def property_info():
 
     return render_template('property_information.html', message=info_message, title=title, header=header, message_1=info_messages[0], message_2=info_messages[1], message_3=info_messages[2], message_4=info_messages[3], message_5=info_messages[4], message_6=info_messages[5], message_7=info_messages[6], prop_url=prop_url)
 
-@app.route('/vehicle-redemption-information')
+@application.route('/vehicle-redemption-information')
 def vehicle_redemption_info():
     title = "Vehicle redemption information"
     header = "Vehicle Release Information"
@@ -123,4 +123,4 @@ def vehicle_redemption_info():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
